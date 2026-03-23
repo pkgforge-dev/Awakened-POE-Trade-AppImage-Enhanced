@@ -1,0 +1,10 @@
+#!/bin/sh
+case "$1" in
+  --appimage-*|--help|-h|--version)
+    ;;
+  *)
+    if [ "$1" != "--no-updates" ]; then
+      set -- "--no-updates" "$@"
+    fi
+    ;;
+esac
