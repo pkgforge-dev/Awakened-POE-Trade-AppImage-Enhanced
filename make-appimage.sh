@@ -3,7 +3,7 @@
 set -eu
 
 ARCH=$(uname -m)
-VERSION=$(pacman -Q PACKAGENAME | awk '{print $2; exit}') # example command to get version of application here
+VERSION=$(curl --retry 30 --retry-delay 2 --retry-all-errors -sL -o /dev/null -w %{url_effective} https://github.com/SnosMe/awakened-poe-trade/releases/latest | grep -oP '[^/]+$' | sed 's/^v//')
 export ARCH VERSION
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.bg.hook"
