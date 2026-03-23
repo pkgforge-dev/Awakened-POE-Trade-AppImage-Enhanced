@@ -8,8 +8,8 @@ export ARCH VERSION
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.bg.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
-export ICON=PATH_OR_URL_TO_ICON
-export DESKTOP=PATH_OR_URL_TO_DESKTOP_ENTRY
+export ICON=awakened-poe-trade.png
+export DESKTOP=awakened-poe-trade.desktop
 export STARTUPWMCLASS="Awakened PoE Trade"
 export DEPLOY_PULSE=1
 export DEPLOY_OPENGL=1
