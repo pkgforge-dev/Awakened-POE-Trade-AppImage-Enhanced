@@ -15,6 +15,12 @@ export DEPLOY_PULSE=1
 export DEPLOY_OPENGL=1
 export DEPLOY_VULKAN=1
 
+# Download the upstream AppImage and extract Electron assets
+wget --retry-connrefused --tries=30 "https://github.com/SnosMe/awakened-poe-trade/releases/download/v${VERSION}/Awakened-PoE-Trade-${VERSION}.AppImage" -O /tmp/poe-appimage
+chmod +x /tmp/poe-appimage
+mkdir -p ./AppDir/bin
+( cd ./AppDir/bin && /tmp/poe-appimage --appimage-extract && rm -rv ./squashfs-root/AppRun ./squashfs-root/usr ./squashfs-root/*.desktop ./squashfs-root/*.png && mv ./squashfs-root . && rm -rv squashfs-root)
+
 # Deploy dependencies
 quick-sharun ./AppDir/bin/* \
 	         /usr/lib/libappindicator3.so*
