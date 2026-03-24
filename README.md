@@ -17,6 +17,9 @@
 
 </div>
 
+> [!NOTE]  
+> This app is already set to use X11 by default, there is no need to apply workarounds outlined in upstream repo issues.
+
 ---
 
 AppImage made using [sharun](https://github.com/VHSgunzo/sharun) and its wrapper [quick-sharun](https://github.com/pkgforge-dev/Anylinux-AppImages/blob/main/useful-tools/quick-sharun.sh), which makes it extremely easy to turn any binary into a portable package reliably without using containers or similar tricks. 
