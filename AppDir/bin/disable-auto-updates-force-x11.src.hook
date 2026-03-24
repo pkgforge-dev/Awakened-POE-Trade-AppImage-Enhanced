@@ -1,0 +1,2 @@
+#!/bin/sh
+set -- --no-updates --ozone-platform=x11 "$@"
