@@ -6,7 +6,7 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm libappindicator nspr nss 
+pacman -Syu --noconfirm libappindicator 
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
