@@ -6,7 +6,7 @@ ARCH=$(uname -m)
 VERSION=$(curl --retry 30 --retry-delay 2 --retry-all-errors -sL -o /dev/null -w %{url_effective} https://github.com/SnosMe/awakened-poe-trade/releases/latest | grep -oP '[^/]+$' | sed 's/^v//')
 export ARCH VERSION
 export OUTPATH=./dist
-export ADD_HOOKS="self-updater.bg.hook"
+export ADD_HOOKS="self-updater.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=awakened-poe-trade.png
 export DESKTOP=awakened-poe-trade.desktop
